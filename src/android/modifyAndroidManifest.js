@@ -24,6 +24,10 @@ module.exports = function(context) {
             '<meta-data\n            tools:replace="android:resource"\n            android:name="android.support.FILE_PROVIDER_PATHS"'
         );
 
+        console.log("✅ >>>  Success to find the manifest file: "+manifest);
+
         fs.writeFileSync(manifestPath, manifest, 'utf8');
+    } else {
+        console.log("❌ >>>  Error to find the manifest file");
     }
 };
