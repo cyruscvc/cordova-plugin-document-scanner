@@ -21,6 +21,10 @@
     <source-file src="src/android/Scan.java" target-dir="src/com/neutrinos/plugin/" />
     <source-file src="src/android/FileHelper.java" target-dir="src/com/neutrinos/plugin/" />
     <framework src="src/android/build.gradle" custom="true" type="gradleReference"/>
+
+    <!-- Hook to update the manifest file -->
+    <hook type="before_plugin_install" src="src/android/manifest-hook.js"/>
+    <hook type="before_plugin_install" src="src/android/modifyAndroidManifest.js"/>
   </platform>
 
 
