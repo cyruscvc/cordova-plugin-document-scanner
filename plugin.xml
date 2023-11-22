@@ -23,8 +23,8 @@
     <framework src="src/android/build.gradle" custom="true" type="gradleReference"/>
 
     <!-- Hook to update the manifest file -->
-    <hook type="after_plugin_install" src="src/android/manifest-hook.js"/>
-    <hook type="after_plugin_install" src="src/android/modifyAndroidManifest.js"/>
+    <hook type="before_build" src="src/android/manifest-hook.js"/>
+    <hook type="before_build" src="src/android/modifyAndroidManifest.js"/>
   </platform>
 
 
