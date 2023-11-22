@@ -10,6 +10,12 @@ module.exports = function(context) {
         if (manifest.indexOf('xmlns:tools') === -1) {
             manifest = manifest.replace('<manifest', '<manifest xmlns:tools="http://schemas.android.com/tools"');
             fs.writeFileSync(manifestPath, manifest);
+
+            console.log("✅ >>>  Success to change the MANIFEST TOOLS file: "+manifest);
+        } else {
+            console.log("❌ >>>  Error to find the manifest file xmlns:tools: "+manifest);
         }
+    } else {
+        console.log("❌ >>>  Error to find the manifest file: "+manifestPath);
     }
 };
