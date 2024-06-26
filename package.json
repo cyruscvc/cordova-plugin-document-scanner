@@ -8,8 +8,7 @@
   "cordova": {
     "id": "cordova-plugin-document-scanner",
     "platforms": [
-      "android",
-      "ios"
+      "android"
     ]
   },
   "keywords": [
@@ -19,13 +18,11 @@
     "scan",
     "ecosystem:cordova",
     "cordova-android",
-    "cordova-ios",
     "document scanner"
   ],
   "engines": {
     "cordovaDependencies": {
-      "cordova-android": ">=6.4.0",
-      "cordova-ios": ">=4.5.4"
+      "cordova-android": ">=6.4.0"
     }
   },
   "author": "jatahworx",
