@@ -27,28 +27,4 @@
     <hook type="before_build" src="src/android/modifyAndroidManifest.js"/>
   </platform>
 
-
-  <platform name="ios">
-    <config-file target="config.xml" parent="/*">
-      <feature name="Scan">
-        <param name="ios-package" value="Scan" />
-      </feature>
-    </config-file>
-
-    <preference name="CAMERA_USAGE_DESCRIPTION" default="This app needs camera access"/>
-    <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
-      <string>$CAMERA_USAGE_DESCRIPTION</string>
-    </config-file>
-
-    <preference name="PHOTOLIBRARY_USAGE_DESCRIPTION" default="This app needs read/write-access photo library access"/>
-    <config-file target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
-      <string>$PHOTOLIBRARY_USAGE_DESCRIPTION</string>
-    </config-file>
-
-    <header-file src="src/ios/Scan.h" target-dir="ScanPlugin"/>
-    <source-file src="src/ios/Scan.m" target-dir="ScanPlugin"/>
-    <framework src="src/ios/TOCropViewController.framework" custom="true" embed="true"/>
-    <framework src="src/ios/IRLDocumentScanner.framework" custom="true" embed="true"/>
-  </platform>
-
 </plugin>
